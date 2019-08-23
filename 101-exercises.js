@@ -1,5 +1,4 @@
 "use strict"; // leave this line here :)
-
 // Welcome to 101 Exercises in JS
 // If you get "ReferenceError: someVariableName is not defined", that means you need to create a variable
 
@@ -7,7 +6,7 @@
 // Example problem setup: Create a variable named doingJSRightNow and assign it the boolean true.
 // The line below creates the variable named doingJSRightNow and assigns the boolean value true
 // To complete Exercise #0, uncomment the following line of JS
-// var doingJSRightNow = true
+var doingJSRightNow = false;
 
 // The lines below will test your answer. If you see an error, then it means that your answer is incorrect or incomplete.
 assert(doingJSRightNow, true, "a variable holding a true boolean value should be equal to true"); 
@@ -16,14 +15,14 @@ addToDone("Exercise 0 is correct");
 
 //  Exercise 1
 // On the line below, create a variable named onMarsRightNow and assign it the boolean value of false
-
+var onMarsRightNow = false;
 assert(onMarsRightNow, false, "If you see a Reference Error, be sure to create the variable and assign it a value.");
 addToDone("Exercise 1 is correct.");
 
 // Exercise 2
 // Create a variable named fruits and assign it an array of strings containing the following fruits.
 // mango, banana, guava, kiwi, and strawberry.
-
+var fruits = ['mango', 'banana', 'guava', 'kiwi', 'strawberry'];
 assert(fruits, ["mango", "banana", "guava", "kiwi", "strawberry"], "Ensure the variable contains all the strings in the provided order");
 addToDone("Exercise 2 is correct.");
 
