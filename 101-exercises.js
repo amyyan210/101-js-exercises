@@ -1159,7 +1159,12 @@ addToDone("Exercise 82 is correct.")
 // Exercise 83
 // Write a function definition named getUniqueValues that takes in an array and returns a set with only the unique values from that array.
 function getUniqueValues(stringArray) {
+  let result = [];
   
+  for () {
+    
+  }
+  return result;
 }
 assert(getUniqueValues(["ant", "ant", "mosquito", "mosquito", "ladybug"]), ["ant", "mosquito", "ladybug"]);
 assert(getUniqueValues(["b", "a", "n", "a", "n", "a", "s"]), ["b", "a", "n", "s"]);
