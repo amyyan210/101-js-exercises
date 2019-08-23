@@ -832,7 +832,9 @@ addToDone("Exercise 58 is correct.")
 // Exercise 59
 // Write a function definition named firstToLast that takes in sequence and returns the sequence with the first value moved to the end of the sequence.
 function firstToLast(sequence) {
-  return sequence[1]
+  for(let i = 0; i < sequence.length; i++) {
+    
+  }
 }
 assert(firstToLast([1, 2, 3, 4]), [2, 3, 4, 1]);
 assert(firstToLast(["JS", "is", "awesome"]), ["is", "awesome", "JS"]);
