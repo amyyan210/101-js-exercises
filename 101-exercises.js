@@ -878,7 +878,19 @@ addToDone("Exercise 61 is correct.")
 // Exercise 62
 // Write a function definition named median that takes in sequence of numbers and returns the average value
 function median(sequence) {
-  return (sequence.length % 2 === 0) ? : sequence[sequence.length]
+  let averageOfEvenMiddles = (
+      // first middle
+      sequence[(sequence.length / 2) - 1] + 
+      // second middle
+      sequence[sequence.length / 2]
+    ) 
+    / 2;
+
+  return (sequence.length % 2 === 0) ? 
+    // even array length
+    averageOfEvenMiddles: 
+    // odd array length
+    sequence[Math.floor(sequence.length / 2)];
 }
 assert(median([1, 2, 3, 4, 5]), 3.0);
 assert(median([1, 2, 3]), 2.0);
