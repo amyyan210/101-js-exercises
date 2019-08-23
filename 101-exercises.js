@@ -1159,10 +1159,12 @@ addToDone("Exercise 82 is correct.")
 // Exercise 83
 // Write a function definition named getUniqueValues that takes in an array and returns a set with only the unique values from that array.
 function getUniqueValues(stringArray) {
-  let result = [];
+  let result = [stringArray[0]];
   
-  for () {
-    
+  for (let i = 1; i < stringArray.length; i++) {
+    if (!result.includes(stringArray[i])) {
+      result.push(stringArray[i]);
+    }
   }
   return result;
 }
