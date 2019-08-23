@@ -832,9 +832,9 @@ addToDone("Exercise 58 is correct.")
 // Exercise 59
 // Write a function definition named firstToLast that takes in sequence and returns the sequence with the first value moved to the end of the sequence.
 function firstToLast(sequence) {
-  for(let i = 0; i < sequence.length; i++) {
-    
-  }
+  let firstElement = sequence.shift();
+  sequence.push(firstElement);
+  return sequence;
 }
 assert(firstToLast([1, 2, 3, 4]), [2, 3, 4, 1]);
 assert(firstToLast(["JS", "is", "awesome"]), ["is", "awesome", "JS"]);
@@ -845,7 +845,13 @@ addToDone("Exercise 59 is correct.")
 
 // Exercise 60
 // Write a function definition named sumAll that takes in sequence of numbers and returns all the numbers added together.
-
+function sumAll(sequence) {
+  let sum = 0;
+  for (let num of sequence) {
+    sum += num;
+  }
+  return sum;
+}
 assert(sumAll([1, 2, 3, 4]), 10);
 assert(sumAll([3, 3, 3]), 9);
 assert(sumAll([0, 5, 6]), 11);
@@ -855,7 +861,13 @@ addToDone("Exercise 60 is correct.")
 
 //  Exercise 61
 //  Write a function definition named mean that takes in sequence of numbers and returns the average value
-
+function mean(sequence) {
+  let sum = 0;
+  for (let num of sequence) {
+    sum += num;
+  }
+  return sum / sequence.length;
+}
 assert(mean([1, 2, 3, 4]), 2.5);
 assert(mean([3, 3, 3]), 3);
 assert(mean([1, 5, 6]), 4);
@@ -865,7 +877,9 @@ addToDone("Exercise 61 is correct.")
 
 // Exercise 62
 // Write a function definition named median that takes in sequence of numbers and returns the average value
-
+function median(sequence) {
+  return (sequence.length )
+}
 assert(median([1, 2, 3, 4, 5]), 3.0);
 assert(median([1, 2, 3]), 2.0);
 assert(median([1, 5, 6]), 5.0);
