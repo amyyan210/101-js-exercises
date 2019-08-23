@@ -901,7 +901,11 @@ addToDone("Exercise 62 is correct.")
 
 // Exercise 63
 // Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus theminimum.
-
+function maxMinusMin(numArray) {
+  let maxNum = Math.max(...numArray);
+  let minNum = Math.min(...numArray);
+  return maxNum - minNum;
+}
 
 assert(maxMinusMin([1, 2, 2, 8, 3, 4]), 7);
 assert(maxMinusMin([1, 1, 2, 3, 9]), 8);
@@ -911,7 +915,7 @@ addToDone("Exercise 63 is correct.")
 
 // Exercise 64
 // Write a function definition named productOfAll that takes in sequence of numbers and returns the product of multiplying all the numbers together
-
+function productOfAll()
 assert(productOfAll([1, 2, 3]), 6);
 assert(productOfAll([3, 4, 5]), 60);
 assert(productOfAll([2, 2, 3, 0]), 0);
