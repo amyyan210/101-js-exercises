@@ -478,7 +478,9 @@ addToDone("Exercise 32 is correct.")
 // Exercise 33
 // Write a function definition named subtract that takes in two numbers and returns the first minus the second argument.
 
-function subtract(num) 
+function subtract(num1, num2) {
+  return num1 - num2;
+}
 assert(subtract(8, 6), 2);
 assert(subtract(27, 4), 23);
 assert(subtract(12, 2), 10);
@@ -488,7 +490,9 @@ addToDone("Exercise 33 is correct.")
 
 // Exercise 34
 // Write a function definition named multiply that takes in two numbers and returns the first times the second argument.
-
+function multiply(num1, num2) {
+  return num1 * num2;
+}
 assert(multiply(2, 1), 2);
 assert(multiply(3, 5), 15);
 assert(multiply(5, 2), 10);
@@ -499,7 +503,9 @@ addToDone("Exercise 34 is correct.")
 // Exercise 35
 // Write a function definition named divide that takes in two numbers and returns the first argument divided by the second argument.
 
-
+function divide(num1, num2) {
+  return num1 / num2;
+}
 assert(divide(27, 9), 3);
 assert(divide(15, 3), 5);
 assert(divide(5, 2), 2.5);
@@ -509,7 +515,9 @@ addToDone("Exercise 35 is correct.")
 
 // Exercise 36
 // Write a function definition named quotient that takes in two numbers and returns only the quotient first argument quotient by the second argument.
-
+function quotient(num1, num2) {
+  return 
+}
 assert(quotient(27, 9), 3)
 assert(quotient(5, 2), 2)
 assert(quotient(10, 3), 3)
