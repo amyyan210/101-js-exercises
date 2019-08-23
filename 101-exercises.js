@@ -6,7 +6,7 @@
 // Example problem setup: Create a variable named doingJSRightNow and assign it the boolean true.
 // The line below creates the variable named doingJSRightNow and assigns the boolean value true
 // To complete Exercise #0, uncomment the following line of JS
-var doingJSRightNow = false;
+var doingJSRightNow = true;
 
 // The lines below will test your answer. If you see an error, then it means that your answer is incorrect or incomplete.
 assert(doingJSRightNow, true, "a variable holding a true boolean value should be equal to true"); 
@@ -29,14 +29,14 @@ addToDone("Exercise 2 is correct.");
 //  Exercise 3
 //  Create a variable named vegetables and assign it an array of fruits containing the following vegetable names as strings: 
 //  eggplant, broccoli, carrot, cauliflower, and zucchini
-
+var vegetables = ['eggplant', 'broccoli', 'carrot', 'cauliflower', 'zucchini'];
 assert(vegetables, ["eggplant", "broccoli", "carrot", "cauliflower", "zucchini"], "Ensure the variable contains all the strings in the provided order");
 addToDone("Exercise 3 is correct.");
 
 
 // Exercise 4
 // Create a variable named numbers and assign it an array of numbers, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 assert(numbers, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Ensure the variable contains the numbers 1-10 in order.");
 addToDone("Exercise 4 is correct.");
 
@@ -44,15 +44,14 @@ addToDone("Exercise 4 is correct.");
 // Exercise 5
 // Add the string "tomato" to the end of the fruits array. 
 // *Hint* Recommend finding and using a built-in JS operation to add to an array rather than recreating the array.
-
+fruits.push('tomato');
 assert(fruits, ["mango", "banana", "guava", "kiwi", "strawberry", "tomato"], "Ensure the variable contains all the strings in the right order");
 addToDone("Exercise 5 is correct");
 
 // Exercise 6
 // Given the following assignment of the vegetables array, add "tomato" to the end of the array. 
 // Recommend using the built-in JS operation to add to an array.
-
-
+vegetables.push('tomato');
 assert(vegetables,["eggplant", "broccoli", "carrot", "cauliflower", "zucchini", "tomato"], "Ensure the variable contains all the strings in the provided order");
 addToDone("Exercise 6 is correct")
 
@@ -60,8 +59,7 @@ addToDone("Exercise 6 is correct")
 // Exercise 7
 // Given the array of numbers defined below, reverse the array of numbers that you created above. 
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-
+numbers.reverse();
 assert(numbers, [10, 9, 8, 7, 6, 5, 4, 3, 2, 1], "An Error means that the answer is incorrect.")
 addToDone("Exercise 7 is correct")
 
@@ -69,7 +67,7 @@ addToDone("Exercise 7 is correct")
 
 // Exercise 8
 // Sort the vegetables in alphabetical order. Recommend finding a way to sort the array with a built-in method
-
+vegetables.sort();
 assert(vegetables, ['broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini'])
 addToDone("Exercise 8 is correct.")
 
@@ -77,7 +75,7 @@ addToDone("Exercise 8 is correct.")
 
 // Exercise 9
 // Write the code necessary to sort the fruits in reverse alphabetical order
-
+fruits.sort().reverse();
 assert(fruits, ['tomato', 'strawberry', 'mango', 'kiwi', 'guava', 'banana'])
 addToDone("Exercise 9 is correct.")
 
@@ -86,7 +84,7 @@ addToDone("Exercise 9 is correct.")
 // Write the code necessary to produce a single array that holds all fruits then all vegetables in the order as they were sorted above.
 // Assign the result to a variable named fruitsAndVeggies. 
 // *hint* the search engine search here would be "how to combine two arrays in JavaScript", for example.
-
+var fruitsAndVeggies = fruits.concat(vegetables);
 assert(fruitsAndVeggies, ['tomato', 'strawberry', 'mango', 'kiwi', 'guava', 'banana', 'broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini'])
 addToDone("Exercise 10 is correct")
 
