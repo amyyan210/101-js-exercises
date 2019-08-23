@@ -516,7 +516,7 @@ addToDone("Exercise 35 is correct.")
 // Exercise 36
 // Write a function definition named quotient that takes in two numbers and returns only the quotient first argument quotient by the second argument.
 function quotient(num1, num2) {
-  return 
+  return Math.floor(num1 / num2);
 }
 assert(quotient(27, 9), 3)
 assert(quotient(5, 2), 2)
@@ -526,7 +526,9 @@ addToDone("Exercise 36 is correct.")
 
 // Exercise 37
 // Write a function definition named remainder that takes in two numbers and returns the remainder of first argument divided by the second argument.
-
+function remainder(num1, num2) {
+  return num1 % num2;
+}
 assert(remainder(3, 3), 0);
 assert(remainder(5, 2), 1);
 assert(remainder(7, 5), 2);
@@ -536,7 +538,9 @@ addToDone("Exercise 37 is correct.")
 
 // Exercise 38
 // Write a function definition named sumOfSquares that takes in two numbers, squares each number, then returns the sum of both squares.
-
+function sumOfSquares(num1, num2) {
+  return (num1 * num1) + (num2 * num2);
+}
 assert(sumOfSquares(3, 2), 13);
 assert(sumOfSquares(5, 2), 29);
 assert(sumOfSquares(2, 4), 20);
@@ -546,7 +550,9 @@ addToDone("Exercise 38 is correct.")
 
 // Exercise 39
 // Write a function definition named timesTwoPlusThree that takes in a number, multiplies it by two, adds 3 and returns the result.
-
+function timesTwoPlusThree(num) {
+  return (num * 2) + 3;
+}
 assert(timesTwoPlusThree(0), 3);
 assert(timesTwoPlusThree(1), 5);
 assert(timesTwoPlusThree(2), 7);
@@ -557,7 +563,9 @@ addToDone("Exercise 39 is correct.")
 
 // Exercise 40
 // Write a function definition named areaOfRectangle that takes in two numbers and returns the product.
-
+function areaOfRectangle(length, width) {
+  return length * width;
+}
 assert(areaOfRectangle(1, 3), 3);
 assert(areaOfRectangle(5, 2), 10);
 assert(areaOfRectangle(2, 7), 14);
@@ -568,7 +576,9 @@ addToDone("Exercise 40 is correct.")
 
 // Exercise 41
 // Write a function definition named areaOfCircle that takes in a number representing a circle's radius and returns the area of the circle
-
+function areaOfCircle(radius) {
+  return Math.PI * radius * radius;
+}
 
 assert(areaOfCircle(3), 28.274333882308138);
 assert(areaOfCircle(5), 78.53981633974483);
@@ -578,7 +588,9 @@ addToDone("Exercise 41 is correct.")
 
 // Exercise 42
 // Write a function definition named circumference that takes in a number representing a circle's radius and returns the circumference.
-
+function circumference(radius) {
+  return 2 * 
+}
 assert(circumference(3), 18.84955592153876);
 assert(circumference(5), 31.41592653589793);
 assert(circumference(7), 43.982297150257104);
