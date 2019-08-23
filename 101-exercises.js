@@ -166,7 +166,9 @@ assert(plusTwo(0), 2, "zero plus 2 is two")
 
 // Exercise 11
 // Write a function definition for a function named addOne that takes in a number and returns that number plus one
-
+function addOne(num) {
+  return num + 1;
+}
 
 
 assert(addOne(2), 3, "Ensure that the function is defined, named properly, and returns the correct value");
@@ -178,7 +180,9 @@ addToDone("Exercise 11 is correct.")
 
 // Exercise 12
 // Write a function definition named isPositive that takes in a number and returns true or false if that number is positive.
-
+function isPositive(num) {
+  return num >= 0;
+}
 
 
 assert(isPositive(positiveOddNumber), true, "Ensure that the function is defined, named properly, and returns the correct value");
@@ -190,7 +194,9 @@ addToDone("Exercise 12 is correct.")
 
 // Exercise 13
 // Write a function definition named isNegative that takes in a number and returns true or False if that number is negative.
-
+function isNegative(num) {
+  return num < 0;
+}
 
 
 assert(isNegative(positiveOddNumber), false, "Ensure that the function is defined, named properly, and returns the correct value");
@@ -202,7 +208,9 @@ addToDone("Exercise 13 is correct.")
 
 // Exercise 14
 // Write a function definition named isOdd that takes in a number and returns true or false if that number is odd.
-
+function isOdd(num) {
+  return num % 2 !== 0;
+}
 assert(isOdd(positiveOddNumber), true, "Ensure that the function is defined, named properly, and returns the correct value");
 assert(isOdd(positiveEvenNumber), false, "Ensure that the function is defined, named properly, and returns the correct value");
 assert(isOdd(negativeOddNumber), true, "Ensure that the function is defined, named properly, and returns the correct value");
@@ -211,7 +219,9 @@ addToDone("Exercise 14 is correct.")
 
 // Exercise 15
 // Write a function definition named isEven that takes in a number and returns true or false if that number is even.
-
+function isEven(num) {
+  return num % 2 === 0;
+}
 assert(isEven(2), true, "Ensure that the function is defined, named properly, and returns the correct value");
 assert(isEven(positiveOddNumber), false, "Ensure that the function is defined, named properly, and returns the correct value");
 assert(isEven(positiveEvenNumber), true, "Ensure that the function is defined, named properly, and returns the correct value");
@@ -222,7 +232,9 @@ addToDone("Exercise 15 is correct.")
 
 // Exercise 16
 // Write a function definition named identity that takes in any argument and returns that argument's value. Don't overthink this one!
-
+function identity(arg) {
+  return arg;
+}
 assert(identity(fruits), fruits, "Ensure that the function is defined, named properly, and returns the correct value");
 assert(identity(vegetables), vegetables, "Ensure that the function is defined, named properly, and returns the correct value");
 assert(identity(positiveOddNumber), positiveOddNumber, "Ensure that the function is defined, named properly, and returns the correct value");
@@ -234,7 +246,9 @@ addToDone("Exercise 16 is correct.")
 
 // Exercise 17
 // Write a function definition named isPositiveOdd that takes in a number and returns true or false if the value is both greater than zero and odd
-
+function isPositiveOdd(num) {
+  return num > 0 && num % 2 !== 0;
+}
 
 
 assert(isPositiveOdd(3), true, "Double check your syntax and logic" );
@@ -247,7 +261,9 @@ addToDone("Exercise 17 is correct.")
 
 // Exercise 18
 // Write a function definition named isPositiveEven that takes in a number and returns true or false if the value is both greater than zero and even
-
+function isPositiveEven(num) {
+  return num > 0 && num % 2 === 0;
+}
 assert(isPositiveEven(4), true, "Double check your syntax and logic" );
 assert(isPositiveEven(positiveOddNumber), false, "Double check your syntax and logic");
 assert(isPositiveEven(positiveEvenNumber), true, "Double check your syntax and logic");
@@ -258,7 +274,9 @@ addToDone("Exercise 18 is correct.")
 
 // Exercise 19
 // Write a function definition named isNegativeOdd that takes in a number and returns true or false if the value is both less than zero and odd.
-
+function isNegativeOdd(num) {
+  return num < 0 && num % 2 !== 0;
+}
 assert(isNegativeOdd(-3), true, "Double check your syntax and logic" );
 assert(isNegativeOdd(positiveOddNumber), false, "Double check your syntax and logic");
 assert(isNegativeOdd(positiveEvenNumber), false, "Double check your syntax and logic");
@@ -269,7 +287,9 @@ addToDone("Exercise 19 is correct.")
 
 // Exercise 20
 // Write a function definition named isNegativeEven that takes in a number and returns true or false if the value is both less than zero and even.
-
+function isNegativeEven(num) {
+  return num < 0 && num % 2 === 0;
+}
 assert(isNegativeEven(-4), true, "Double check your syntax and logic" );
 assert(isNegativeEven(positiveOddNumber), false, "Double check your syntax and logic");
 assert(isNegativeEven(positiveEvenNumber), false, "Double check your syntax and logic");
@@ -281,7 +301,9 @@ addToDone("Exercise 20 is correct.")
 
 // Exercise 21
 // Write a function definition named half that takes in a number and returns half the provided number.
-
+function half (num) {
+  return num / 2;
+}
 assert(half(4), 2);
 assert(half(5), 2.5);
 assert(half(positiveOddNumber), positiveOddNumber / 2);
@@ -294,7 +316,9 @@ addToDone("Exercise 21 is correct.")
 
 // Exercise 22
 // Write a function definition named double that takes in a number and returns double the provided number.
-
+function double(num) {
+  return num * 2;
+}
 assert(double(4), 8)
 assert(double(5), 10)
 assert(double(positiveOddNumber), positiveOddNumber * 2)
@@ -307,7 +331,9 @@ addToDone("Exercise 22 is correct.")
 
 // Exercise 23
 // Write a function definition named triple that takes in a number and returns triple the provided number.
-
+function triple(num) {
+  return num * 3;
+}
 assert(triple(4), 12);
 assert(triple(5), 15);
 assert(triple(positiveOddNumber), positiveOddNumber * 3);
@@ -320,7 +346,9 @@ addToDone("Exercise 23 is correct.")
 
 // Exercise 24
 // Write a function definition named reverseSign that takes in a number and returns the provided number but with the sign reversed.
-
+function reverseSign(num) {
+  return -num;
+}
 assert(reverseSign(4), -4);
 assert(reverseSign(-5), 5);
 assert(reverseSign(positiveOddNumber), positiveOddNumber * -1);
@@ -333,7 +361,9 @@ addToDone("Exercise 24 is correct.")
 
 // Exercise 25
 // Write a function definition named absoluteValue that takes in a number and returns the absolute value of the provided number
-
+function absoluteValue(num) {
+  return (num > 0) ? num : num + (2 * num);
+}
 assert(absoluteValue(4), 4);
 assert(absoluteValue(-5), 5);
 assert(absoluteValue(positiveOddNumber), positiveOddNumber);
