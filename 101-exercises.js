@@ -589,7 +589,7 @@ addToDone("Exercise 41 is correct.")
 // Exercise 42
 // Write a function definition named circumference that takes in a number representing a circle's radius and returns the circumference.
 function circumference(radius) {
-  return 2 * 
+  return 2 * Math.PI * radius;
 }
 assert(circumference(3), 18.84955592153876);
 assert(circumference(5), 31.41592653589793);
@@ -600,7 +600,10 @@ addToDone("Exercise 42 is correct.")
 
 // Exercise 43
 // Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
-
+function isVowel(letter) {
+  let vowels = 'aeiou'.split("");
+  return vowels.includes(letter.toLowerCase());
+}
 assert(isVowel("a"), true);
 assert(isVowel("U"), true);
 assert(isVowel("banana"), false);
@@ -611,7 +614,16 @@ addToDone("Exercise 43 is correct.")
 
 // Exercise 44
 // Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
-
+function hasVowels(str) {
+  let vowels = 'aeiou'.split("");
+  let stringArray = str.split("");
+  for (let char of stringArray) {
+    if (vowels.includes(char.toLowerCase())) {
+      return true;
+    }
+  }
+  return false;
+}
 assert(hasVowels("banana"), true);
 assert(hasVowels("ubuntu"), true);
 assert(hasVowels("QQQQ"), false);
@@ -621,7 +633,14 @@ addToDone("Exercise 44 is correct.")
 
 // Exercise 45
 // Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
-
+function countVowels(str) {
+  let count = 0;
+  let vowels = 'aeiou'.split("");
+  
+  for (let i = 0; i < str.length; i++) {
+    i
+  }
+}
 assert(countVowels("banana"), 3)
 assert(countVowels("ubuntu"), 3)
 assert(countVowels("mango"), 2)
