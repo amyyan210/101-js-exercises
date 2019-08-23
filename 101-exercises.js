@@ -1176,7 +1176,17 @@ addToDone("Exercise 83 is correct.")
 
 // Exercise 84
 // Write a function definition named getUniqueValuesFromTwoArrays that takes two arrays and returns a single array with only the unique values
-
+function getUniqueValuesFromTwoArrays(stringArray1, stringArray2) {
+  let combinedArray = stringArray1.concat(stringArray2);
+  let result = [combinedArray[0]];
+  
+  for (let i = 1; i < combinedArray.length; i++) {
+    if (!result.includes(combinedArray[i])) {
+      result.push(combinedArray[i]);
+    }
+  }
+  return result;
+}
 assert(getUniqueValuesFromTwoArrays([5, 1, 2, 3], [3, 4, 5, 5]), [1, 2, 3, 4, 5]);
 assert(getUniqueValuesFromTwoArrays([1, 1], [2, 2, 3]), [1, 2, 3]);
 assert(getUniqueValuesFromTwoArrays(["tomato", "mango", "kiwi"], ["eggplant", "tomato", "broccoli"]), ["tomato", "mango", "kiwi", "eggplant", "broccoli"]);
