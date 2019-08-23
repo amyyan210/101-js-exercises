@@ -362,7 +362,7 @@ addToDone("Exercise 24 is correct.")
 // Exercise 25
 // Write a function definition named absoluteValue that takes in a number and returns the absolute value of the provided number
 function absoluteValue(num) {
-  return (num > 0) ? num : num + (2 * num);
+  return (num > 0) ? num : num + (-2 * num);
 }
 assert(absoluteValue(4), 4);
 assert(absoluteValue(-5), 5);
@@ -376,7 +376,9 @@ addToDone("Exercise 25 is correct.")
 
 // Exercise 26
 // Write a function definition named isMultipleOfThree that takes in a number and returns true or false if the number is evenly divisible by 3.
-
+function isMultipleOfThree(num) {
+  return num % 3 === 0;
+}
 assert(isMultipleOfThree(3), true);
 assert(isMultipleOfThree(15), true);
 assert(isMultipleOfThree(9), true);
@@ -389,7 +391,9 @@ addToDone("Exercise 26 is correct.")
 
 // Exercise 27
 // Write a function definition named isMultipleOfFive that takes in a number and returns true or false if the number is evenly divisible by 5.
-
+function isMultipleOfFive(num) {
+  return num % 5 === 0;
+}
 assert(isMultipleOfFive(3), false);
 assert(isMultipleOfFive(15), true);
 assert(isMultipleOfFive(9), false);
@@ -401,7 +405,9 @@ addToDone("Exercise 27 is correct.")
 
 // Exercise 28
 // Write a function definition named isMultipleOfBothThreeAndFive that takes in a number and returns true or false if the number is evenly divisible by both 3 and 5.
-
+function isMultipleOfBothThreeAndFive(num) {
+  return num % 3 === 0 && num % 5 === 0;
+}
 assert(isMultipleOfBothThreeAndFive(15), true);
 assert(isMultipleOfBothThreeAndFive(45), true);
 assert(isMultipleOfBothThreeAndFive(3), false);
@@ -414,7 +420,9 @@ addToDone("Exercise 28 is correct.")
 
 // Exercise 29
 // Write a function definition named square that takes in a number and returns the number times itself.
-
+function square (num) {
+  return num * num;
+}
 assert(square(3), 9);
 assert(square(2), 4);
 assert(square(9), 81);
@@ -426,7 +434,9 @@ addToDone("Exercise 29 is correct.")
 // Exercise 30
 // Write a function definition named add that takes in two numbers and returns the sum.
 
-
+function add(num1, num2) {
+  return num1 + num2;
+}
 assert(add(3, 2), 5);
 assert(add(10, -2), 8);
 assert(add(5, 7), 12);
@@ -436,7 +446,9 @@ addToDone("Exercise 30 is correct.")
 
 // Exercise 31
 // Write a function definition named cube that takes in a number and returns the number times itself, times itself.
-
+function cube(num) {
+  return num * num * num;
+}
 assert(cube(3), 27);
 assert(cube(2), 8);
 assert(cube(5), 125);
@@ -448,7 +460,13 @@ addToDone("Exercise 31 is correct.")
 // Exercise 32
 // Write a function definition named squareRoot that takes in a number and returns the square root of the provided number
 
-
+function squareRoot(num) {
+  for (let i = 0; i < num / 2; i++) {
+    if (i * i === num) {
+      return num;
+    }
+  }
+}
 assert(squareRoot(4), 2.0);
 assert(squareRoot(64), 8.0);
 assert(squareRoot(81), 9.0);
