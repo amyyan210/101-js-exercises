@@ -1028,7 +1028,7 @@ addToDone("Exercise 72 is correct.")
 // Write a function definition named hasOdds that takes in sequence of numbers and returns true if there are any odd numbers in the sequence
 function hasOdds(numArray) {
   let element = numArray.find((element) => element % 2 !== 0);
-  
+  return element !== undefined;
 }
 assert(hasOdds([1, 2, 3]), true);
 assert(hasOdds([2, 5, 6]), true);
@@ -1039,7 +1039,9 @@ addToDone("Exercise 73 is correct.")
 
 // Exercise 74
 // Write a function definition named countOdds that takes in sequence of numbers and returns a count of the any odd numbers in the sequence
-
+function countOdds(numArray) {
+  return numArray.filter((element) => element % 2 !== 0).length;
+}
 assert(countOdds([1, 2, 3]), 2);
 assert(countOdds([2, 5, 6]), 1);
 assert(countOdds([3, 3, 3]), 3);
@@ -1049,7 +1051,9 @@ addToDone("Exercise 74 is correct.")
 
 // Exercise 75
 // Write a function definition named countNegatives that takes in sequence of numbers and returns a count of the number of negative numbers
-
+function countNegatives(numArray) {
+  return numArray.filter((element) => element < 0).length;
+}
 assert(countNegatives([1, -2, 3]), 1);
 assert(countNegatives([2, -5, -6]), 2);
 assert(countNegatives([3, 3, 3]), 0);
@@ -1058,7 +1062,9 @@ addToDone("Exercise 75 is correct.")
 
 // Exercise 76
 // Write a function definition named countPositives that takes in sequence of numbers and returns a count of the number of positive numbers
-
+function countPositives(numArray) {
+  return numArray.filter((element) => element >= 0).length;
+}
 assert(countPositives([1, -2, 3]), 2);
 assert(countPositives([2, -5, -6]), 1);
 assert(countPositives([3, 3, 3]), 3);
@@ -1068,7 +1074,9 @@ addToDone("Exercise 76 is correct.")
 
 // Exercise 77
 // Write a function definition named onlyPositiveEvens that takes in sequence of numbers and returns an array containing all the positive evens from the sequence
-
+function onlyPositiveEvens(numArray) {
+  return numArray.filter((element) => element >= 0 && element % 2 === 0);
+}
 assert(onlyPositiveEvens([1, -2, 3]), []);
 assert(onlyPositiveEvens([2, -5, -6]), [2]);
 assert(onlyPositiveEvens([3, 3, 4, 6]), [4, 6]);
@@ -1078,7 +1086,9 @@ addToDone("Exercise 77 is correct.")
 
 // Exercise 78
 // Write a function definition named onlyPositiveOdds that takes in sequence of numbers and returns an array containing all the positive odd numbers from the sequence
-
+function onlyPositiveOdds(numArray) {
+  return numArray.filter((element) => element >= 0 && element % 2 !== 0);
+}
 assert(onlyPositiveOdds([1, -2, 3]), [1, 3]);
 assert(onlyPositiveOdds([2, -5, -6]), []);
 assert(onlyPositiveOdds([3, 3, 4, 6]), [3, 3]);
@@ -1088,7 +1098,9 @@ addToDone("Exercise 78 is correct.")
 
 // Exercise 79
 // Write a function definition named onlyNegativeEvens that takes in sequence of numbers and returns an array containing all the negative even numbers from the sequence
-
+function onlyNegativeEvens(numArray) {
+  return numArray.filter((element) => element < 0 && element % 2 === 0);
+}
 assert(onlyNegativeEvens([1, -2, 3]), [-2]);
 assert(onlyNegativeEvens([2, -5, -6]), [-6]);
 assert(onlyNegativeEvens([3, 3, 4, 6]), []);
@@ -1098,7 +1110,9 @@ addToDone("Exercise 79 is correct.")
 
 // Exercise 80
 // Write a function definition named onlyNegativeOdds that takes in sequence of numbers and returns an array containing all the negative odd numbers from the sequence
-
+function onlyNegativeOdds(numArray) {
+  return numArray.filter((element) => element < 0 && element % 2 !== 0);
+}
 assert(onlyNegativeOdds([1, -2, 3]), []);
 assert(onlyNegativeOdds([2, -5, -6]), [-5]);
 assert(onlyNegativeOdds([3, 3, 4, 6]), []);
@@ -1108,7 +1122,15 @@ addToDone("Exercise 80 is correct.")
 
 // Exercise 81
 // Write a function definition named shortestString that takes in an array of strings and returns the shortest string in the array.
-
+function shortestString(stringArray) {
+  let shortest = stringArray[0];
+  for (let i = 0; i < stringArray.length; i++) {
+    if (stringArray[i].length < shortest.length) {
+      shortest = stringArray[i];
+    }
+  }
+  return shortest;
+}
 assert(shortestString(["kiwi", "mango", "strawberry"]), "kiwi");
 assert(shortestString(["hello", "everybody"]), "hello");
 assert(shortestString(["mary", "had", "a", "little", "lamb"]), "a");
@@ -1117,7 +1139,15 @@ addToDone("Exercise 81 is correct.")
 
 // Exercise 82
 // Write a function definition named longestString that takes in sequence of strings and returns the longest string in the array.
-
+function longestString(stringArray) {
+  let longest = stringArray[0];
+  for (let i = 0; i < stringArray.length; i++) {
+    if (stringArray[i].length > longest.length) {
+      longest = stringArray[i];
+    }
+  }
+  return longest;
+}
 assert(longestString(["kiwi", "mango", "strawberry"]), "strawberry");
 assert(longestString(["hello", "everybody"]), "everybody");
 assert(longestString(["mary", "had", "a", "little", "lamb"]), "little");
@@ -1128,7 +1158,9 @@ addToDone("Exercise 82 is correct.")
 
 // Exercise 83
 // Write a function definition named getUniqueValues that takes in an array and returns a set with only the unique values from that array.
-
+function getUniqueValues(stringArray) {
+  
+}
 assert(getUniqueValues(["ant", "ant", "mosquito", "mosquito", "ladybug"]), ["ant", "mosquito", "ladybug"]);
 assert(getUniqueValues(["b", "a", "n", "a", "n", "a", "s"]), ["b", "a", "n", "s"]);
 assert(getUniqueValues(["mary", "had", "a", "little", "lamb", "little", "lamb", "little", "lamb"]), ["mary", "had", "a", "little", "lamb"]);
@@ -1138,7 +1170,6 @@ addToDone("Exercise 83 is correct.")
 // Exercise 84
 // Write a function definition named getUniqueValuesFromTwoArrays that takes two arrays and returns a single array with only the unique values
 
-
 assert(getUniqueValuesFromTwoArrays([5, 1, 2, 3], [3, 4, 5, 5]), [1, 2, 3, 4, 5]);
 assert(getUniqueValuesFromTwoArrays([1, 1], [2, 2, 3]), [1, 2, 3]);
 assert(getUniqueValuesFromTwoArrays(["tomato", "mango", "kiwi"], ["eggplant", "tomato", "broccoli"]), ["tomato", "mango", "kiwi", "eggplant", "broccoli"]);
@@ -1147,7 +1178,6 @@ addToDone("Exercise 84 is correct.")
 
 // Exercise 85
 // Write a function definition named getValuesInCommon that takes two arrays and returns a single array with the values that each array has in common
-
 
 assert(getValuesInCommon([5, 1, 2, 3], [3, 4, 5, 5]), [3, 5]);
 assert(getValuesInCommon([1, 2], [2, 2, 3]), [2]);
