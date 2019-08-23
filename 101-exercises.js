@@ -461,9 +461,9 @@ addToDone("Exercise 31 is correct.")
 // Write a function definition named squareRoot that takes in a number and returns the square root of the provided number
 
 function squareRoot(num) {
-  for (let i = 0; i < num / 2; i++) {
-    if (i * i === num) {
-      return num;
+  for (let i = 0; i < num; i++) {
+    if ((i * i) === num) {
+      return i;
     }
   }
 }
@@ -478,7 +478,7 @@ addToDone("Exercise 32 is correct.")
 // Exercise 33
 // Write a function definition named subtract that takes in two numbers and returns the first minus the second argument.
 
-
+function subtract(num) 
 assert(subtract(8, 6), 2);
 assert(subtract(27, 4), 23);
 assert(subtract(12, 2), 10);
