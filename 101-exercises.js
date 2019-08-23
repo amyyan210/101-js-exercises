@@ -915,7 +915,14 @@ addToDone("Exercise 63 is correct.")
 
 // Exercise 64
 // Write a function definition named productOfAll that takes in sequence of numbers and returns the product of multiplying all the numbers together
-function productOfAll()
+function productOfAll(numArray) {
+  let product = numArray[0];
+  
+  for (let i = 1; i < numArray.length; i++) {
+    product *= numArray[i];
+  }
+  return product;
+}
 assert(productOfAll([1, 2, 3]), 6);
 assert(productOfAll([3, 4, 5]), 60);
 assert(productOfAll([2, 2, 3, 0]), 0);
@@ -924,8 +931,9 @@ addToDone("Exercise 64 is correct.")
 
 // Exercise 65
 // Write a function definition named getHighestNumber that takes in sequence of numbers and returns the largest number.
-
-
+function getHighestNumber(numArray) {
+  return Math.max(...numArray);
+}
 assert(getHighestNumber([1, 2, 3]), 3);
 assert(getHighestNumber([1, 5, 2, 3, 4]), 5);
 assert(getHighestNumber([5, 1, 2, 4, 9]), 9);
@@ -933,11 +941,11 @@ addToDone("Exercise 65 is correct.")
 
 
 
-
 // Exercise 66
 // Write a function definition named getSmallestNumber that takes in sequence of numbers and returns the smallest number.
-
-
+function getSmallestNumber(numArray) {
+  return Math.min(...numArray);
+}
 assert(getSmallestNumber([1, 2, 3]), 1);
 assert(getSmallestNumber([3, 5, 9, 8, 1]), 1);
 assert(getSmallestNumber([8, 9, 4, 5, 7]), 4);
@@ -946,7 +954,9 @@ addToDone("Exercise 66 is correct.")
 
 // Exercise 67
 // Write a function definition named onlyOddNumbers that takes in sequence of numbers and returns the odd numbers in an array.
-
+function onlyOddNumbers(numArray) {
+  return numArray.filter()
+}
 assert(onlyOddNumbers([1, 2, 3]), [1, 3]);
 assert(onlyOddNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-5, -3, -1, 1, 3, 5]);
 assert(onlyOddNumbers([-4, -3, 1]), [-3, 1]);
