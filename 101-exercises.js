@@ -1333,6 +1333,7 @@ function totalOfBookPrices(bookArray) {
   for (let book of bookArray) {
     total += book.price;
   }
+  return total;
 }
 assert(totalOfBookPrices(books), 122.9)
 addToDone("Exercise 92 is complete.")
@@ -1340,7 +1341,15 @@ addToDone("Exercise 92 is complete.")
 
 // Exercise 93
 // Write a function named getAverageBookPrice that takes in a array of objects and returns the average book price.
-
+function getAverageBookPrice(bookArray) {
+  let total = 0;
+  
+  for(let book of bookArray) {
+    total += book.price;
+  }
+  
+  return total / bookArray.length;
+}
 assert(getAverageBookPrice(books), 30.725);
 addToDone("Exercise 93 is complete.")
 
@@ -1348,7 +1357,16 @@ addToDone("Exercise 93 is complete.")
 // Exercise 94
 // Write a function called highestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the highest priced book.
 // Hint: Much like sometimes start functions with a variable set to zero, you may want to create a object with the price set to zero to compare to each object's price in the array
-
+function highestPriceBook(bookArray) {
+  let winner = bookArray[0];
+  
+  for (let book in bookArray) {
+    if (book.price > winner.price) {
+      winner = book;
+    }
+  }
+  return winner;
+}
 assert(highestPriceBook(books), {
     "title": "The Visual Display of Quantitative Information",
     "price": 38.00,
