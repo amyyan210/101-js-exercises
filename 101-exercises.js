@@ -1197,14 +1197,10 @@ addToDone("Exercise 84 is correct.")
 // Write a function definition named getValuesInCommon that takes two arrays and returns a single array with the values that each array has in common
 function getValuesInCommon(stringArray1, stringArray2) {
   let result = [];
-  let longestArray;
-  let shortestArray;
-  stringArray1.length > stringArray2.length ? longestArray = stringArray1 : longestArray = stringArray1
-  stringArray1.length > stringArray2.length ? shortestArray = stringArray2 : shortestArray = stringArray1
-  
-  for (let i = 1; i < longestArray.length; i++) {
-    if (shortestArray.includes(longestArray[i])) {
-      result.push(longestArray[i]);
+	
+  for (let i = 0; i < stringArray1.length; i++) {
+    if (stringArray2.includes(stringArray1[i]) && !result.includes(stringArray1[i])) {
+      result.push(stringArray1[i]);
     }
   }
   return result;
@@ -1218,7 +1214,16 @@ addToDone("Exercise 85 is correct.")
 
 // Exercise 86
 // Write a function definition named getValuesNotInCommon that takes two arrays and returns a single array with the values that each array does not have in common
-
+function getValuesNotInCommon(stringArray1, stringArray2) {
+  let result = [];
+	
+  for (let i = 0; i < stringArray1.length; i++) {
+    if (stringArray2.includes(stringArray1[i]) && !result.includes(stringArray1[i])) {
+      result.push(stringArray1[i]);
+    }
+  }
+  return result;
+}
 assert(getValuesNotInCommon([5, 1, 2, 3], [3, 4, 5, 5]), [1, 2, 4]);
 assert(getValuesNotInCommon([1, 1], [2, 2, 3]), [1, 2, 3]);
 assert(getValuesNotInCommon(["tomato", "mango", "kiwi"], ["eggplant", "tomato", "broccoli"]), ["mango", "kiwi", "eggplant", "broccoli"]);
