@@ -1218,8 +1218,13 @@ function getValuesNotInCommon(stringArray1, stringArray2) {
   let result = [];
 	
   for (let i = 0; i < stringArray1.length; i++) {
-    if (stringArray2.includes(stringArray1[i]) && !result.includes(stringArray1[i])) {
+    if (!stringArray2.includes(stringArray1[i]) && !result.includes(stringArray1[i])) {
       result.push(stringArray1[i]);
+    }
+  }
+  for (let i = 0; i < stringArray2.length; i++) {
+    if (!stringArray1.includes(stringArray2[i]) && !result.includes(stringArray2[i])) {
+      result.push(stringArray2[i]);
     }
   }
   return result;
