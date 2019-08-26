@@ -1500,10 +1500,10 @@ function getAverageSpentPerItem(shoppingCart) {
   let totalQuantity = totalNumberOfItems(shoppingCart);
   
   for (let item of shoppingCart.items) {
-    
+    totalCost += item.price;
   }
   
-  
+  return totalCost / totalQuantity;
 }
 assert(getAverageSpentPerItem(shoppingCart), 1.333529411764706);
 addToDone("Exercise 100 is complete.")
