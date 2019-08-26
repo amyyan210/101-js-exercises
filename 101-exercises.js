@@ -1255,7 +1255,9 @@ const thomasPaper = {
 
 // Exercise 87
 // Write a function named getPaperTitle that takes in a object and returns the title property
-
+function getPaperTitle(obj) {
+  return obj.title;
+}
 assert(getPaperTitle(tukeyPaper), "The Future of Data Analysis");
 assert(getPaperTitle(thomasPaper), "A mathematical model of glutathione metabolism");
 addToDone("Exercise 87 is correct.")
@@ -1269,7 +1271,9 @@ const book = {
 
 // Exercise 89
 // Write a function named getPrice that takes in a object and returns the price
-
+function getPrice(obj) {
+  return obj.price;
+}
 assert(getPrice(book), 36.99);
 addToDone("Exercise 89 is complete.")
 
@@ -1277,7 +1281,9 @@ addToDone("Exercise 89 is complete.")
 
 // Exercise 90
 // Write a function named getBookAuthor that takes in a object (the above declared book variable) and returns the author's name
-
+function getBookAuthor(obj) {
+  return obj.author;
+}
 
 assert(getBookAuthor(book), "Frances Buontempo");
 addToDone("Exercise 90 is complete.")
@@ -1312,7 +1318,9 @@ const books = [
 
 // Exercise 91
 // Write a function named getNumberOfBooks that takes in a array of objects and returns the number of objects in that array.
-
+function getNumberOfBooks(objArray) {
+  return objArray.length;
+}
 assert(getNumberOfBooks(books), 4);
 addToDone("Exercise 91 is complete.")
 
@@ -1320,7 +1328,12 @@ addToDone("Exercise 91 is complete.")
 
 // Exercise 92
 // Write a function named totalOfBookPrices that takes in a array of objects and returns the sum total of all the book prices added together
-
+function totalOfBookPrices(bookArray) {
+  let total = 0;
+  for (let book of bookArray) {
+    total += book.price;
+  }
+}
 assert(totalOfBookPrices(books), 122.9)
 addToDone("Exercise 92 is complete.")
 
