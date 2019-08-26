@@ -1187,7 +1187,7 @@ function getUniqueValuesFromTwoArrays(stringArray1, stringArray2) {
   }
   return result;
 }
-assert(getUniqueValuesFromTwoArrays([5, 1, 2, 3], [3, 4, 5, 5]), [1, 2, 3, 4, 5]);
+assert(getUniqueValuesFromTwoArrays([5, 1, 2, 3], [3, 4, 5, 5]), [5, 1, 2, 3, 4]);
 assert(getUniqueValuesFromTwoArrays([1, 1], [2, 2, 3]), [1, 2, 3]);
 assert(getUniqueValuesFromTwoArrays(["tomato", "mango", "kiwi"], ["eggplant", "tomato", "broccoli"]), ["tomato", "mango", "kiwi", "eggplant", "broccoli"]);
 addToDone("Exercise 84 is correct.")
@@ -1195,7 +1195,20 @@ addToDone("Exercise 84 is correct.")
 
 // Exercise 85
 // Write a function definition named getValuesInCommon that takes two arrays and returns a single array with the values that each array has in common
-
+function getValuesInCommon(stringArray1, stringArray2) {
+  let result = [];
+  let longestArray;
+  let shortestArray;
+  stringArray1.length > stringArray2.length ? longestArray = stringArray1 : longestArray = stringArray1
+  stringArray1.length > stringArray2.length ? shortestArray = stringArray2 : longestArray = stringArray1
+  
+  for (let i = 1; i < longestArray.length; i++) {
+    if (stringArray2.includes(longestArray[i])) {
+      result.push(stringArray1[i]);
+    }
+  }
+  return result;
+}
 assert(getValuesInCommon([5, 1, 2, 3], [3, 4, 5, 5]), [3, 5]);
 assert(getValuesInCommon([1, 2], [2, 2, 3]), [2]);
 assert(getValuesInCommon(["tomato", "mango", "kiwi"], ["eggplant", "tomato", "broccoli"]), ["tomato"]);
