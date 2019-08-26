@@ -1200,16 +1200,16 @@ function getValuesInCommon(stringArray1, stringArray2) {
   let longestArray;
   let shortestArray;
   stringArray1.length > stringArray2.length ? longestArray = stringArray1 : longestArray = stringArray1
-  stringArray1.length > stringArray2.length ? shortestArray = stringArray2 : longestArray = stringArray1
+  stringArray1.length > stringArray2.length ? shortestArray = stringArray2 : shortestArray = stringArray1
   
   for (let i = 1; i < longestArray.length; i++) {
-    if (stringArray2.includes(longestArray[i])) {
-      result.push(stringArray1[i]);
+    if (shortestArray.includes(longestArray[i])) {
+      result.push(longestArray[i]);
     }
   }
   return result;
 }
-assert(getValuesInCommon([5, 1, 2, 3], [3, 4, 5, 5]), [3, 5]);
+assert(getValuesInCommon([5, 1, 2, 3], [3, 4, 5, 5]), [5, 3]);
 assert(getValuesInCommon([1, 2], [2, 2, 3]), [2]);
 assert(getValuesInCommon(["tomato", "mango", "kiwi"], ["eggplant", "tomato", "broccoli"]), ["tomato"]);
 addToDone("Exercise 85 is correct.")
