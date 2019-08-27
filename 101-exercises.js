@@ -1500,7 +1500,7 @@ function getAverageSpentPerItem(shoppingCart) {
   let totalQuantity = totalNumberOfItems(shoppingCart);
   
   for (let item of shoppingCart.items) {
-    totalCost += item.price;
+    totalCost += (item.price * item.quantity);
   }
   
   return totalCost / totalQuantity;
@@ -1514,6 +1514,18 @@ addToDone("Exercise 100 is complete.")
 // Be sure to do this as programmatically as possible. 
 // Hint: Similarly to how we sometimes begin a function with setting a variable to zero, we need a starting place:
 // Hint: Consider creating a variable that is a object with the keys "price" and "quantity" both set to 0. You can then compare each item's price and quantity total to the one from "most"
+function mostSpentOnItem(shoppingCart) {
+  let highestCostItem = shoppingCart.items[0];
+  let highestCostQuantity = highestCostItem.quantity;
+  
+  for (let item of shoppingCart.items) {
+    let totalItemCost = item.price * item.quantity;
+    if (totalItemCost > (highestCostItem.price * highestCostQuantity)) {
+      highestCostItem = item;    
+    }
+  }
+  return highestCostItem;
+}
 
 assert(mostSpentOnItem(shoppingCart), {
     "title": "chocolate",
